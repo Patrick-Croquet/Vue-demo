@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Cours 1 - Vue.js</title>
+    </head>
+
+    <body>
+        <div id="app-1">
+            <p>{{ message }}</p>
+        </div>
+        <div id="app-2">
+            <span v-bind:title="message">Passez votre souris sur moi pendant quelques secondes pour voir mon titre liĂÂŠ dynamiquement !</span>
+        </div>
+
+        <div id="app-3">
+            <p v-if='seen'>Maintenant vous me voyez</p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</head>
