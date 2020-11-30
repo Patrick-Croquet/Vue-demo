@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   
+    <title>Exemple4 - hooks JavaScript Vue.js</title> 
+</head>
+<body>
+    <!--
+    Velocity fonctionne aussi bien que jQuery.animate et est
+    une excellente option pour les animations
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>  
+    <div id="example-4">
+      <button @click="show = !show">
+        Permuter
+      </button>
+      <transition
+        v-on:before-enter="beforeEnter"
+        v-on:enter="enter"
+        v-on:leave="leave"
+        v-bind:css="false"
+      >
+        <p v-if="show">
+          Démo
+        </p>
+      </transition>
+    </div>
+</body> 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/main.js"></script>
+</html>

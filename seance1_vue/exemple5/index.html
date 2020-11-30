@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">    
+    <title>Exemple5 - Transition entre les composants Vue.js</title> 
+</head>
+<body>
+  <div id="transition-components-demo">
+    <input type="radio" value="v-a" id="a">A
+    <input type="radio" value="v-b" id="b">B
+    <transition name="component-fade" mode="out-in">
+        <component v-bind:is="view"></component>
+    </transition>
+  </div>  
+</body> 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/main.js"></script>
+</html>
