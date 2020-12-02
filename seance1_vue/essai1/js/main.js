@@ -1,21 +1,21 @@
-var app1 = new Vue({
+let app1 = new Vue({
     el: '#app-1',
     data: {
         message: 'Hello Vue.js'
     }
 })
 
-var app2 = new Vue({
+let app2 = new Vue({
     el: '#app-2',
     data: {
-        message: 'Vous avez affichĂÂŠ cette page le ' + new Date().toLocaleString()
+        message: 'Vous avez affiché à cette page le ' + new Date().toLocaleString()
     }
 })
 
-var app3 = new Vue({
+let app3 = new Vue({
     el: '#app-3',
     data: {
-        seen: false
+        seen: true
     }
 
 })
