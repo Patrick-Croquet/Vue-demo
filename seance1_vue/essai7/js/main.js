@@ -16,8 +16,8 @@ const app = new Vue({
         fetch('products.json')
             .then(response => response.json())
             .then(json => {
-                //this.products = json.products
-                this.products = json
+                this.products = json.products
+                //this.products = json
             })
     }
 })

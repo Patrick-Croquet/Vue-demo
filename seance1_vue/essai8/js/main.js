@@ -8,7 +8,7 @@ const app = new Vue({
             return this.products.reduce(
                 (sum, product) => {
                     return sum + product.quantity
-                }, 0)
+                }, 0)    
         }
     },
     created() {
@@ -16,8 +16,8 @@ const app = new Vue({
         fetch('products.json')
             .then(response => response.json())
             .then(json => {
-                //this.products = json.products
-                this.products = json
+                this.products = json.products
+                //this.products = json
             })
     }
 })

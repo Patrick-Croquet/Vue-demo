@@ -1,0 +1,27 @@
+[
+    {
+    "id":1,       
+    "bpi":{
+                "pommes" : {
+                    "id":1,
+                    "name": "Pink lady",
+                    "description": "Pink lady",
+                    "quantity": 6
+                    },
+                "poires":
+                    {
+                        "id":1,
+                        "name": "Williams",
+                        "description": "Williams",
+                        "quantity": 10
+                    },            
+                "cerise":
+                    {
+                        "id":1,
+                        "name": "Griottes",
+                        "description": "Griottes",
+                        "quantity": 15
+                    }                
+    }
+}
+]
