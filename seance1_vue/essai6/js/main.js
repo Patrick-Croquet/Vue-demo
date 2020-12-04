@@ -12,10 +12,12 @@ const app = new Vue({
         }
     },
     created() {
-        fetch('https://api.myjson.com/bins/74l63')
+        // fetch('https://api.myjson.com/bins/74l63')
+        fetch('products.json')
             .then(response => response.json())
             .then(json => {
-                this.products = json.products
+                //this.products = json.products
+                this.products = json
             })
     }
 })
