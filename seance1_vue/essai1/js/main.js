@@ -8,14 +8,14 @@ let app1 = new Vue({
 let app2 = new Vue({
     el: '#app-2',
     data: {
-        message: 'Vous avez affiché à cette page le ' + new Date().toLocaleString()
+        message: 'Vous avez affiché cette page le ' + new Date().toLocaleString()
     }
 })
 
 let app3 = new Vue({
     el: '#app-3',
     data: {
-        seen: true
+        seen: false
     }
 
 })
