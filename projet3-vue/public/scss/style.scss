@@ -1,5 +1,5 @@
-$purple: #3bee68;
-$yellow: white;
+$blue: #3b95ee;
+$white: white;
 
 /* GLOBAL STYLES
 -------------------------------------------------- */
@@ -10,8 +10,24 @@ body {
     padding-bottom: 3rem;
     color: #5a5a5a;
   }
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+.btn-outline-primary {
+    color: $blue !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: $blue !important;
+    color: $white !important;
+}
   
-  .bd-placeholder-img {
+.bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
     -webkit-user-select: none;
@@ -20,9 +36,9 @@ body {
     user-select: none;
   }
   
-  footer {
+footer {
     margin: 5px;
-    /*background-color: $purple;
+    /*background-color: $blue;
     color: white*/
   }
   /*# sourceMappingURL=style.css.map */

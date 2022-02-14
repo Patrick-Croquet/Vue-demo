@@ -52,7 +52,7 @@ export default {
             errors: []
         }
   },
-  // Fetches posts when the component is created.
+  // Fetches Details when the component is created.
   created() {
     axios.get(`http://localhost:8080/details.json`)
     .then(response => {
