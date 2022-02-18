@@ -6,7 +6,7 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <!-- <div class="carousel-item active">
             <img src="@/assets/montagne1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
@@ -19,14 +19,17 @@
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
             </div>
-            </div>
-            <div class="carousel-item">
+            </div> -->
+
+            <Slide v-for="(slide,index) in slides" :key="index" :id="slide.id" :titre="slide.titre" :image="slide.image"  />
+            
+            <!-- <div class="carousel-item">
             <img src="@/assets/montagne4.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>Some representative placeholder content for the third slide.</p>
             </div>
-            </div>
+            </div> -->
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -40,11 +43,37 @@
 </template>
 
 <script>
+import Slide from '@/components/Slide.vue'
+
 export default {
-  name: 'Carousel',
-  props: {
-   
-  }
+    name: 'Carousel',
+    components: {
+    Slide,
+    },
+    props: {
+
+    },
+    data(){
+        return {
+            slides:[
+                {
+                    id:1,
+                    titre:'First slide label',
+                    image:'montagne1.jpg',
+                },
+                {
+                    id:2,
+                    titre:'Second slide label',
+                    image:'montagne2.jpg',
+                },
+                {
+                    id:3,
+                    titre:'Third slide label',
+                    image:'montagne4.jpg',
+                },
+            ],
+        }
+    },
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="col-lg-4">
       <img :src="require(`@/assets/${image}`)" width="140" height="140"  class="img-fluid" alt="...">
-      <h2>{{titre}}</h2>
+      <h2 v-if="id === 1">{{titre}}</h2>
       <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
       <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
   </div><!-- /.col-lg-4 -->
@@ -11,6 +11,7 @@
 export default {
   name: 'Details',
   props: {
+    id: Number,
     titre:String,
     image:String,
   }

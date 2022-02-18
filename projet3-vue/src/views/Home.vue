@@ -5,7 +5,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <div class="container marketing">    
         <div class="row">
-            <Detail v-for="(detail,index) in details" :key="index" :titre="detail.titre" :image="detail.image"  />
+            <Detail v-for="(detail,index) in details" :key="index" :id="detail.id" :titre="detail.titre" :image="detail.image"  />
         </div>
     </div>
     <Features />
@@ -54,7 +54,7 @@ export default {
   },
   // Fetches Details when the component is created.
   created() {
-    axios.get(`http://localhost:8081/details.json`)
+    axios.get(`http://localhost:8080/details.json`)
     .then(response => {
       // JSON responses are automatically parsed.
       this.details = response.data.details
