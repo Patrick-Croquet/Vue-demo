@@ -62,7 +62,7 @@ export default {
   },
   // Fetches Details when the component is created.
   created() {
-    axios.get(`http://localhost:8081/details.json`)
+    axios.get(`http://localhost:8080/details.json`)
     .then(response => {
       // JSON responses are automatically parsed.
       this.details = response.data.details
