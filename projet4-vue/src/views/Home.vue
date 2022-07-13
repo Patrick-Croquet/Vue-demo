@@ -54,8 +54,8 @@ export default {
   },
   // Fetches Details when the component is created.
   created() {
-    // axios.get(`https://localhost:8000/api/details.jsonld`)
-    axios.get(`http://localhost:8081/details2.json`)
+    axios.get(`https://localhost:8000/api/details.jsonld`)
+    // axios.get(`http://localhost:8081/details2.json`)
     // axios.get(`http://localhost:8081/details.json`)
     .then(response => {
       // JSON responses are automatically parsed.
