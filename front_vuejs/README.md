@@ -1,13 +1,5 @@
-# projet3-vue
-Installation
-npm install -g @vue/cli
-vue --version
-Vue CLI v4.5.15
-vue create projet3-vue
-installation manuelle
-npm run serve 
-
-npm install --save axios vue-axios
+# cocktail
+https://www.youtube.com/playlist?list=PLwJWw4Pbl4w-15dlG6RJI_xfC9ywBYv2I
 
 ## Project setup
 ```
@@ -24,13 +16,5 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-### API 
-activity-api [Github]
