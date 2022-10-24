@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">   
+    <title>Essai 9</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app">
+        <div class="flex">
+            <h1>Dark Mode toggle</h1>
+            <div class="mode-toggle" @click="modeToggle" :class="darkDark">
+                <div class="toggle">
+                    <div id="dark-mode" type="checkbox"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const { createApp } = Vue
+    
+        createApp({
+            data() {
+                return {
+                    darkMode: false
+                }
+            },
+            methods: {
+                dark() {
+                    document.querySelector('body').classList.add('dark-mode')
+                    this.darkMode = true
+                    this.$emit('dark')
+                },
+
+                light() {
+                    document.querySelector('body').classList.remove('dark-mode')
+                    this.darkMode = false
+                    this.$emit('light')
+                },
+
+                modeToggle() {
+                    if(this.darkMode || document.querySelector('body').classList.contains('dark-mode')) {
+                        this.light()
+                    } else {
+                        this.dark()
+                    }
+                },
+            },
+        
+            computed: {
+                darkDark() {
+                    return this.darkMode && 'darkmode-toggled'
+                }
+            }   
+        }).mount('#app')
+    </script>     
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essai 5</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <div id="app">
+        <li v-for="product in products">
+            {{ product.quantity }} {{ product.name}}
+            <span v-if="product.quantity === 0">
+                - OUT OF STOCK
+            </span>
+        </li>
+    </div>
+    
+    <script>
+      const { createApp } = Vue
+    
+      createApp({
+        data() {
+            return {
+                products: []
+            }
+        },
+        created() {
+            fetch('products.json')
+            .then(response => response.json())
+            .then(json => {
+                this.products = json.products
+                //this.products = json
+            })
+        }
+      }).mount('#app')
+    </script>     
+</body>
+</html>

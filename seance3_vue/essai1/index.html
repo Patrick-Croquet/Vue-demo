@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">    
+    <title>Essai 1 - Vue.js</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app-1">
+        <p>{{ message }}</p>
+    </div>
+
+    <div id="app-2">
+        <span v-bind:title="message">Passez votre souris sur moi pendant quelques secondes pour voir mon titre lié dynamiquement !</span>
+    </div>
+
+    <div id="app-3">
+        <p v-if='seen'>Maintenant vous me voyez</p>
+    </div>
+    
+    <script>
+      const { createApp } = Vue
+    
+      createApp({
+        data() {
+          return {
+            message: 'Hello Vue.js'
+          }
+        }
+      }).mount('#app-1')
+
+      createApp({
+        data() {
+          return {
+            message: 'Vous avez affiché cette page le ' + new Date().toLocaleString()
+          }
+        }
+      }).mount('#app-2') 
+      
+      createApp({
+        data() {
+          return {
+            seen: true
+          }
+        }
+      }).mount('#app-3')    
+    </script>        
+</body>
+</html>
