@@ -28,6 +28,13 @@
         "description": "Griottes",
         "price": 0.70,
         "quantity": 15
-        } 
+        }, 
+        { 
+        "id":4,
+        "name": "Cavendish",
+        "description": "Cavendish",
+        "price": 0.80,
+        "quantity": 5
+        }  
     ]
 }

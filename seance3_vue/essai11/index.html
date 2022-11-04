@@ -20,14 +20,14 @@
 
                 <button v-if="product.quantity > 0" @click="
                     product.quantity -=1 ; 
-                    quantity[product.id-1] ++;    
+                    quantities[product.id-1] ++;    
                     ">Add {{ product.id }}</button>
-                <span>{{ quantity[product.id-1] }}</span> 
+                <span>{{ quantities[product.id-1] }}</span> 
            </li>
         </ul>
         <h2>Total Inventory: {{ totalProducts }}</h2>
 
-        <h4 v-for="product in products">Price {{ product.name}} : {{ (quantity[product.id-1]*product.price).toFixed(2) }}</h4>  
+        <span v-for="product in products">Price {{ product.name}} : {{ (quantities[product.id-1]*product.price).toFixed(2) }}<br /> </span> 
         <h2>Total Price: {{ TotalPrice.toFixed(2) }}</h2> 
     </div>
     
@@ -38,7 +38,7 @@
         data() {
             return {
                 products: [],
-                quantity:[],
+                quantities:[],
                 price: 0
             }
         },
@@ -47,7 +47,7 @@
             {  
             return this.products.reduce(
                 (sum, product) => {
-                    this.quantity.push(this.price)
+                    this.quantities.push(this.price)
                     sum += product.quantity
                     return sum
                 }, 0)         
@@ -56,8 +56,8 @@
             {
             return this.products.reduce(
                 (total, product) => {
-                    total += this.quantity[product.id-1]*product.price
-                    return total //return this.quantity[0]*0.5+this.quantity[1]*0.6+this.quantity[2]*0.7  
+                    total += this.quantities[product.id-1]*product.price
+                    return total //return this.quantities[0]*0.5+this.quantities[1]*0.6+this.quantities[2]*0.7  
                 }, 0) 
                             
             }
